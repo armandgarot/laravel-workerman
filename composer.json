@@ -1,0 +1,35 @@
+{
+    "name": "armandgarot/laravel-workerman",
+    "description": "A Laravel server side alternative implementation of socket.io in PHP based on Workerman.",
+    "keywords": [
+		"laravel",
+		"socket.io",
+		"event-loop",
+        "asynchronous"
+	],
+    "license": "MIT",
+	"authors": [
+        {
+            "name": "Armand Garot",
+            "email": "armand.garot@gmail.com"
+        }
+    ],
+    "require": {
+		"php": ">=5.3",
+		"workerman/workerman" : ">=3.3.0",
+		"workerman/channel" : ">=1.0.0",
+		"workerman/phpsocket.io": ">=1.1"
+    },
+    "autoload": {
+		"psr-4": {
+			"ArmandGarot\\LaravelWorkerman\\": "./src"
+		}
+    },
+	"extra": {
+        "laravel": {
+            "providers": [
+                "ArmandGarot\\LaravelWorkerman\\LaravelWorkermanServiceProvider"
+            ]
+        }
+    }
+}
